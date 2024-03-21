@@ -95,8 +95,8 @@
       <label for="nom">Nom:</label><br>
       <input type="text" id="nom" name="nom" required><br><br>
       
-      <label for="avis">Avis:</label><br>
-      <textarea id="avis" name="avis" rows="4" cols="50" required></textarea><br><br>
+      <!-- Retirer l'étiquette pour l'avis -->
+      <textarea id="avis" name="avis" rows="4" cols="50" placeholder="Laissez votre avis ici..." required></textarea><br><br>
       
       <label for="evaluation">Évaluation:</label><br>
       <input type="range" id="evaluation" name="evaluation" min="1" max="5" required><br>
@@ -111,7 +111,7 @@
     <h2>Merci pour votre avis!</h2>
     <p>Votre avis a été soumis avec succès.</p>
     <p>Nom: <span id="nomOutput"></span></p>
-    <p>Avis: <span id="avisOutput"></span></p>
+    <!-- Retirer l'affichage de l'avis -->
     <p>Évaluation: <span id="evaluationOutput"></span></p>
   </div>
 
@@ -155,7 +155,8 @@
 
         // Affichage des valeurs soumises dans la confirmation
         document.getElementById('nomOutput').textContent = nom;
-        document.getElementById('avisOutput').textContent = avis;
+        // Retirer l'affichage de l'avis
+        // document.getElementById('avisOutput').textContent = avis;
         switch (evaluation) {
           case '1':
             document.getElementById('evaluationOutput').textContent = '😢';
